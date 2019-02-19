@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B99D7E1D984A289ED19B39A /* libPods-DayDream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 623469BD00EF4D4574215A9C /* libPods-DayDream.a */; };
+		809823C0221BCE4D00F0A48B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 809823BF221BCE4D00F0A48B /* AppDelegate.m */; };
+		809823C3221BCE4D00F0A48B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 809823C2221BCE4D00F0A48B /* ViewController.m */; };
+		809823C6221BCE4D00F0A48B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 809823C4221BCE4D00F0A48B /* Main.storyboard */; };
+		809823C8221BCE4E00F0A48B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 809823C7221BCE4E00F0A48B /* Assets.xcassets */; };
+		809823CB221BCE4F00F0A48B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 809823C9221BCE4F00F0A48B /* LaunchScreen.storyboard */; };
+		809823CE221BCE4F00F0A48B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 809823CD221BCE4F00F0A48B /* main.m */; };
+		809823D8221BDAEB00F0A48B /* HYDNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 809823D7221BDAEB00F0A48B /* HYDNetwork.m */; };
+		809823DF221BDD5A00F0A48B /* HomeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 809823DE221BDD5A00F0A48B /* HomeScrollView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		32FEE5B9AB334F2E7F819154 /* Pods-DayDream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayDream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DayDream/Pods-DayDream.debug.xcconfig"; sourceTree = "<group>"; };
+		623469BD00EF4D4574215A9C /* libPods-DayDream.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DayDream.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AB27063C8F99D98FD29AAAF /* Pods-DayDream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayDream.release.xcconfig"; path = "Pods/Target Support Files/Pods-DayDream/Pods-DayDream.release.xcconfig"; sourceTree = "<group>"; };
+		809823BB221BCE4D00F0A48B /* DayDream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayDream.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		809823BE221BCE4D00F0A48B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		809823BF221BCE4D00F0A48B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		809823C1221BCE4D00F0A48B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		809823C2221BCE4D00F0A48B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		809823C5221BCE4D00F0A48B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		809823C7221BCE4E00F0A48B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		809823CA221BCE4F00F0A48B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		809823CC221BCE4F00F0A48B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		809823CD221BCE4F00F0A48B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		809823D4221BDA3600F0A48B /* DayDream.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DayDream.pch; sourceTree = "<group>"; };
+		809823D6221BDAEB00F0A48B /* HYDNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYDNetwork.h; sourceTree = "<group>"; };
+		809823D7221BDAEB00F0A48B /* HYDNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYDNetwork.m; sourceTree = "<group>"; };
+		809823DD221BDD5A00F0A48B /* HomeScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeScrollView.h; sourceTree = "<group>"; };
+		809823DE221BDD5A00F0A48B /* HomeScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeScrollView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		809823B8221BCE4D00F0A48B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B99D7E1D984A289ED19B39A /* libPods-DayDream.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1EF391D88DFE866C356B3620 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				623469BD00EF4D4574215A9C /* libPods-DayDream.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		809823B2221BCE4D00F0A48B = {
+			isa = PBXGroup;
+			children = (
+				809823BD221BCE4D00F0A48B /* DayDream */,
+				809823BC221BCE4D00F0A48B /* Products */,
+				99A02967DC97A17C8E318334 /* Pods */,
+				1EF391D88DFE866C356B3620 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		809823BC221BCE4D00F0A48B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				809823BB221BCE4D00F0A48B /* DayDream.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		809823BD221BCE4D00F0A48B /* DayDream */ = {
+			isa = PBXGroup;
+			children = (
+				809823BE221BCE4D00F0A48B /* AppDelegate.h */,
+				809823BF221BCE4D00F0A48B /* AppDelegate.m */,
+				809823DC221BDD0D00F0A48B /* View */,
+				809823DB221BDD0300F0A48B /* ViewModel */,
+				809823DA221BDCFB00F0A48B /* Model */,
+				809823D9221BDCE300F0A48B /* Controller */,
+				809823C4221BCE4D00F0A48B /* Main.storyboard */,
+				809823C7221BCE4E00F0A48B /* Assets.xcassets */,
+				809823C9221BCE4F00F0A48B /* LaunchScreen.storyboard */,
+				809823CC221BCE4F00F0A48B /* Info.plist */,
+				809823CD221BCE4F00F0A48B /* main.m */,
+				809823D5221BDADA00F0A48B /* Tool */,
+				809823D4221BDA3600F0A48B /* DayDream.pch */,
+			);
+			path = DayDream;
+			sourceTree = "<group>";
+		};
+		809823D5221BDADA00F0A48B /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				809823D6221BDAEB00F0A48B /* HYDNetwork.h */,
+				809823D7221BDAEB00F0A48B /* HYDNetwork.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		809823D9221BDCE300F0A48B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				809823C1221BCE4D00F0A48B /* ViewController.h */,
+				809823C2221BCE4D00F0A48B /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		809823DA221BDCFB00F0A48B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		809823DB221BDD0300F0A48B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		809823DC221BDD0D00F0A48B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				809823DD221BDD5A00F0A48B /* HomeScrollView.h */,
+				809823DE221BDD5A00F0A48B /* HomeScrollView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		99A02967DC97A17C8E318334 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				32FEE5B9AB334F2E7F819154 /* Pods-DayDream.debug.xcconfig */,
+				6AB27063C8F99D98FD29AAAF /* Pods-DayDream.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		809823BA221BCE4D00F0A48B /* DayDream */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 809823D1221BCE4F00F0A48B /* Build configuration list for PBXNativeTarget "DayDream" */;
+			buildPhases = (
+				2FD7F71D5F16D2970A1B78FB /* [CP] Check Pods Manifest.lock */,
+				809823B7221BCE4D00F0A48B /* Sources */,
+				809823B8221BCE4D00F0A48B /* Frameworks */,
+				809823B9221BCE4D00F0A48B /* Resources */,
+				48A2C672217167EC2FE7F81D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DayDream;
+			productName = DayDream;
+			productReference = 809823BB221BCE4D00F0A48B /* DayDream.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		809823B3221BCE4D00F0A48B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "蛤蛤";
+				TargetAttributes = {
+					809823BA221BCE4D00F0A48B = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 809823B6221BCE4D00F0A48B /* Build configuration list for PBXProject "DayDream" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 809823B2221BCE4D00F0A48B;
+			productRefGroup = 809823BC221BCE4D00F0A48B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				809823BA221BCE4D00F0A48B /* DayDream */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		809823B9221BCE4D00F0A48B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				809823CB221BCE4F00F0A48B /* LaunchScreen.storyboard in Resources */,
+				809823C8221BCE4E00F0A48B /* Assets.xcassets in Resources */,
+				809823C6221BCE4D00F0A48B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2FD7F71D5F16D2970A1B78FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DayDream-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48A2C672217167EC2FE7F81D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DayDream/Pods-DayDream-resources.sh",
+				"${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/FontAwesome.otf",
+				"${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/foundation-icons.ttf",
+				"${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/ionicons.ttf",
+				"${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/Material-Design-Iconic-Font.ttf",
+				"${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/octicons.ttf",
+				"${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/zocial-regular-webfont.ttf",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MWPhotoBrowser/MWPhotoBrowser.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.otf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/foundation-icons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ionicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Material-Design-Iconic-Font.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/octicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/zocial-regular-webfont.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MWPhotoBrowser.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DayDream/Pods-DayDream-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		809823B7221BCE4D00F0A48B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				809823C3221BCE4D00F0A48B /* ViewController.m in Sources */,
+				809823CE221BCE4F00F0A48B /* main.m in Sources */,
+				809823DF221BDD5A00F0A48B /* HomeScrollView.m in Sources */,
+				809823D8221BDAEB00F0A48B /* HYDNetwork.m in Sources */,
+				809823C0221BCE4D00F0A48B /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		809823C4221BCE4D00F0A48B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				809823C5221BCE4D00F0A48B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		809823C9221BCE4F00F0A48B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				809823CA221BCE4F00F0A48B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		809823CF221BCE4F00F0A48B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		809823D0221BCE4F00F0A48B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		809823D2221BCE4F00F0A48B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32FEE5B9AB334F2E7F819154 /* Pods-DayDream.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GSTK768WD6;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DayDream/DayDream.pch";
+				INFOPLIST_FILE = DayDream/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.daydream.DayDream;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		809823D3221BCE4F00F0A48B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AB27063C8F99D98FD29AAAF /* Pods-DayDream.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GSTK768WD6;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DayDream/DayDream.pch";
+				INFOPLIST_FILE = DayDream/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.daydream.DayDream;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		809823B6221BCE4D00F0A48B /* Build configuration list for PBXProject "DayDream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				809823CF221BCE4F00F0A48B /* Debug */,
+				809823D0221BCE4F00F0A48B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		809823D1221BCE4F00F0A48B /* Build configuration list for PBXNativeTarget "DayDream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				809823D2221BCE4F00F0A48B /* Debug */,
+				809823D3221BCE4F00F0A48B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 809823B3221BCE4D00F0A48B /* Project object */;
+}
