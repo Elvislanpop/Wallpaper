@@ -18,7 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBar.hidden = YES;
-    self.MainScrollView = [[HomeScrollView alloc]initWithFrame:self.view.bounds];
+    self.MainScrollView = [[HomeScrollView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    if (@available(iOS 11,*)) {
+        [self.MainScrollView setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
+    }
+    else
+    {
+         [self automaticallyAdjustsScrollViewInsets];
+    }
+    
     
     [self.view addSubview:self.MainScrollView];
     // Do any additional setup after loading the view, typically from a nib.
