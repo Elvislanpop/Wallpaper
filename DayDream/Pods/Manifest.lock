@@ -45,6 +45,7 @@ PODS:
     - FontAwesomeKit/Core
   - Masonry (1.1.0)
   - MBProgressHUD (0.9.2)
+  - MJExtension (3.0.15.1)
   - MWPhotoBrowser (2.1.2):
     - DACircularProgress (~> 2.3)
     - MBProgressHUD (~> 0.9)
@@ -59,6 +60,7 @@ DEPENDENCIES:
   - EasyReact
   - FontAwesomeKit
   - Masonry
+  - MJExtension
   - MWPhotoBrowser
   - SDWebImage
   - YYCache
@@ -74,6 +76,7 @@ SPEC REPOS:
     - FontAwesomeKit
     - Masonry
     - MBProgressHUD
+    - MJExtension
     - MWPhotoBrowser
     - SDWebImage
     - YYCache
@@ -88,10 +91,11 @@ SPEC CHECKSUMS:
   FontAwesomeKit: 3614979b3dbb0ec3f7fac1bd760b91f66c31db67
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   MWPhotoBrowser: 5836d7aa041dc05a13de380c246826578adc5ea5
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: 7d16a8033a9e994f2d1dbb7959850f554ef24264
+PODFILE CHECKSUM: fc1ae9e8f958d6991033524be2d48daa556661e9
 
 COCOAPODS: 1.5.3

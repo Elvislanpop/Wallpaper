@@ -9,7 +9,7 @@
   UNPlash 开源项目
  设计模式:  MVVM
  开发语言:  Object-C
- 双向绑定框架:  EasyReact
+ 双向绑定框架:  EasyReact 
  API: UNPlash （ https://unsplash.com/documentation#creating-a-developer-account ）
  开发人员: DayDream
  */

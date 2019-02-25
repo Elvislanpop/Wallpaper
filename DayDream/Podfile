@@ -11,6 +11,7 @@ target 'DayDream' do
     pod "MWPhotoBrowser"
     pod 'SDWebImage'
     pod 'FontAwesomeKit'
+    pod 'MJExtension'
   # Pods for DayDream
 
 end
