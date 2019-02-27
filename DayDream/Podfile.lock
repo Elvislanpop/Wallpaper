@@ -43,6 +43,7 @@ PODS:
     - FontAwesomeKit/Core
   - FontAwesomeKit/Zocial (2.2.1):
     - FontAwesomeKit/Core
+  - IQKeyboardManager (6.2.0)
   - Masonry (1.1.0)
   - MBProgressHUD (0.9.2)
   - MJExtension (3.0.15.1)
@@ -59,6 +60,7 @@ DEPENDENCIES:
   - AFNetworking
   - EasyReact
   - FontAwesomeKit
+  - IQKeyboardManager
   - Masonry
   - MJExtension
   - MWPhotoBrowser
@@ -74,6 +76,7 @@ SPEC REPOS:
     - EasySequence
     - EasyTuple
     - FontAwesomeKit
+    - IQKeyboardManager
     - Masonry
     - MBProgressHUD
     - MJExtension
@@ -89,6 +92,7 @@ SPEC CHECKSUMS:
   EasySequence: 78462a0b839cb6b8a18e30a5adc37055bac0b929
   EasyTuple: a6a068ab3aa47e899a0c9f9ee23ddb394542ea9e
   FontAwesomeKit: 3614979b3dbb0ec3f7fac1bd760b91f66c31db67
+  IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
@@ -96,6 +100,6 @@ SPEC CHECKSUMS:
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: fc1ae9e8f958d6991033524be2d48daa556661e9
+PODFILE CHECKSUM: f51a8aa39c61a7c3e99e9aa8d76ca37bd2b7e265
 
 COCOAPODS: 1.5.3

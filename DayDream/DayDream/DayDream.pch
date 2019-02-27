@@ -18,7 +18,12 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #define APIBasePath @"https://api.unsplash.com/"
-#define API_Client_ID @"1dded6b7a47dd2023a5e91dc6a929029efd04bfd70e2f02adee4721d4c315873"
+#define API_Client_ID @"4a466a58a8fa9cffa4bd1854eb5e13aa09a4002cdcaeb3dfb7ae3c48b9bfbe1c"
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
+#define HeaderImageHeight ScreenHeight / 2.7
+#define IPhoneX [UIScreen mainScreen].bounds.size.height >=812
+#define random(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#define randomColor random(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 #endif /* DayDream_pch */

@@ -83,6 +83,24 @@
 @end
 
 
+@interface Cover_photo :NSObject
+@property (nonatomic , copy) NSString              * id;
+@property (nonatomic , copy) NSString              * created_at;
+@property (nonatomic , copy) NSString              * updated_at;
+@property (nonatomic , assign) NSInteger              width;
+@property (nonatomic , assign) NSInteger              height;
+@property (nonatomic , copy) NSString              * color;
+@property (nonatomic , copy) NSString              * description;
+@property (nonatomic , strong) Urls              * urls;
+@property (nonatomic , strong) Links              * links;
+@property (nonatomic , assign) BOOL              sponsored;
+@property (nonatomic , assign) NSInteger              likes;
+@property (nonatomic , assign) BOOL              liked_by_user;
+@property (nonatomic , strong) User              * user;
+
+@end
+
+
 @interface ExampleModelName :NSObject
 @property (nonatomic , copy) NSString              * id;
 @property (nonatomic , copy) NSString              * created_at;
@@ -90,7 +108,8 @@
 @property (nonatomic , assign) NSInteger              width;
 @property (nonatomic , assign) NSInteger              height;
 @property (nonatomic , copy) NSString              * color;
-//@property (nonatomic , strong) NSString              * description;
+@property (nonatomic , strong) Cover_photo              * cover_photo;
+
 @property (nonatomic , strong) Urls              * urls;
 @property (nonatomic , strong) Links              * links;
 @property (nonatomic , assign) BOOL              sponsored;
@@ -101,5 +120,6 @@
 @property (nonatomic , strong) Location              * location;
 @property (nonatomic , assign) NSInteger              views;
 @property (nonatomic , assign) NSInteger              downloads;
+@property (nonatomic,strong)  NSString            *title;
 
 @end

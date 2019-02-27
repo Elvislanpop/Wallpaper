@@ -6,7 +6,7 @@
 //  Copyright © 2019 蛤蛤. All rights reserved.
 //
 
-#import "HeaderImageModel.h"
+#import "HomeModel.h"
 
 @implementation Urls
 @end

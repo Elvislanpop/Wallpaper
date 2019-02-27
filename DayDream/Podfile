@@ -12,6 +12,7 @@ target 'DayDream' do
     pod 'SDWebImage'
     pod 'FontAwesomeKit'
     pod 'MJExtension'
+    pod 'IQKeyboardManager'
   # Pods for DayDream
 
 end

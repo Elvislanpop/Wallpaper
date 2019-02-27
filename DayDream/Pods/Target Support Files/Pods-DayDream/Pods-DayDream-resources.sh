@@ -98,6 +98,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/Material-Design-Iconic-Font.ttf"
   install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/octicons.ttf"
   install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/zocial-regular-webfont.ttf"
+  install_resource "${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/MWPhotoBrowser/MWPhotoBrowser.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -107,6 +108,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/Material-Design-Iconic-Font.ttf"
   install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/octicons.ttf"
   install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/zocial-regular-webfont.ttf"
+  install_resource "${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/MWPhotoBrowser/MWPhotoBrowser.bundle"
 fi
 

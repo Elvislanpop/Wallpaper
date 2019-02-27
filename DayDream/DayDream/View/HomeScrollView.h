@@ -11,6 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeScrollView : UIScrollView
+@property (nonatomic,strong) EZRMutableNode <UISearchBar *>*searchBarNode;
+
 -(instancetype)initWithFrame:(CGRect)frame;
 @end
 

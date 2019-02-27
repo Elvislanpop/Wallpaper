@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		089B4F0522224D9A00CF7CA3 /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 089B4F0422224D9A00CF7CA3 /* HomeViewModel.m */; };
-		089B4F0822224E0A00CF7CA3 /* HeaderImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 089B4F0722224E0A00CF7CA3 /* HeaderImageModel.m */; };
+		089B4F0822224E0A00CF7CA3 /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 089B4F0722224E0A00CF7CA3 /* HomeModel.m */; };
 		1B99D7E1D984A289ED19B39A /* libPods-DayDream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 623469BD00EF4D4574215A9C /* libPods-DayDream.a */; };
+		806E5E4D222409C5002A4305 /* NewViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 806E5E4C222409C5002A4305 /* NewViewModel.m */; };
+		806E5E5022250C8F002A4305 /* ExploreViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 806E5E4F22250C8F002A4305 /* ExploreViewModel.m */; };
+		806E5E8922263E51002A4305 /* UIImage+addText.m in Sources */ = {isa = PBXBuildFile; fileRef = 806E5E8522263E50002A4305 /* UIImage+addText.m */; };
+		806E5E8A22263E51002A4305 /* NSString+StringSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 806E5E8822263E50002A4305 /* NSString+StringSize.m */; };
+		806E5E8D22266987002A4305 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 806E5E8C22266987002A4305 /* SearchViewController.m */; };
 		809823C0221BCE4D00F0A48B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 809823BF221BCE4D00F0A48B /* AppDelegate.m */; };
 		809823C3221BCE4D00F0A48B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 809823C2221BCE4D00F0A48B /* ViewController.m */; };
 		809823C6221BCE4D00F0A48B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 809823C4221BCE4D00F0A48B /* Main.storyboard */; };
@@ -21,13 +26,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		089B4F0322224D9A00CF7CA3 /* HomeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HomeViewModel.h; path = DayDream/HomeViewModel.h; sourceTree = SOURCE_ROOT; };
-		089B4F0422224D9A00CF7CA3 /* HomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HomeViewModel.m; path = DayDream/HomeViewModel.m; sourceTree = SOURCE_ROOT; };
-		089B4F0622224E0A00CF7CA3 /* HeaderImageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HeaderImageModel.h; path = DayDream/HeaderImageModel.h; sourceTree = SOURCE_ROOT; };
-		089B4F0722224E0A00CF7CA3 /* HeaderImageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HeaderImageModel.m; path = DayDream/HeaderImageModel.m; sourceTree = SOURCE_ROOT; };
+		089B4F0322224D9A00CF7CA3 /* HomeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HomeViewModel.h; path = DayDream/ViewModel/HomeViewModel.h; sourceTree = SOURCE_ROOT; };
+		089B4F0422224D9A00CF7CA3 /* HomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HomeViewModel.m; path = DayDream/ViewModel/HomeViewModel.m; sourceTree = SOURCE_ROOT; };
+		089B4F0622224E0A00CF7CA3 /* HomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HomeModel.h; path = DayDream/Model/HomeModel.h; sourceTree = SOURCE_ROOT; };
+		089B4F0722224E0A00CF7CA3 /* HomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HomeModel.m; path = DayDream/Model/HomeModel.m; sourceTree = SOURCE_ROOT; };
 		32FEE5B9AB334F2E7F819154 /* Pods-DayDream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayDream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DayDream/Pods-DayDream.debug.xcconfig"; sourceTree = "<group>"; };
 		623469BD00EF4D4574215A9C /* libPods-DayDream.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DayDream.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB27063C8F99D98FD29AAAF /* Pods-DayDream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayDream.release.xcconfig"; path = "Pods/Target Support Files/Pods-DayDream/Pods-DayDream.release.xcconfig"; sourceTree = "<group>"; };
+		806E5E4B222409C5002A4305 /* NewViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewViewModel.h; sourceTree = "<group>"; };
+		806E5E4C222409C5002A4305 /* NewViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewViewModel.m; sourceTree = "<group>"; };
+		806E5E4E22250C8F002A4305 /* ExploreViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExploreViewModel.h; sourceTree = "<group>"; };
+		806E5E4F22250C8F002A4305 /* ExploreViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExploreViewModel.m; sourceTree = "<group>"; };
+		806E5E8522263E50002A4305 /* UIImage+addText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+addText.m"; sourceTree = "<group>"; };
+		806E5E8622263E50002A4305 /* UIImage+addText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+addText.h"; sourceTree = "<group>"; };
+		806E5E8722263E50002A4305 /* NSString+StringSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringSize.h"; sourceTree = "<group>"; };
+		806E5E8822263E50002A4305 /* NSString+StringSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StringSize.m"; sourceTree = "<group>"; };
+		806E5E8B22266987002A4305 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		806E5E8C22266987002A4305 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		809823BB221BCE4D00F0A48B /* DayDream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayDream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		809823BE221BCE4D00F0A48B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		809823BF221BCE4D00F0A48B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -65,6 +80,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		806E5E4622240950002A4305 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				089B4F0322224D9A00CF7CA3 /* HomeViewModel.h */,
+				089B4F0422224D9A00CF7CA3 /* HomeViewModel.m */,
+				806E5E4B222409C5002A4305 /* NewViewModel.h */,
+				806E5E4C222409C5002A4305 /* NewViewModel.m */,
+				806E5E4E22250C8F002A4305 /* ExploreViewModel.h */,
+				806E5E4F22250C8F002A4305 /* ExploreViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		806E5E4722240958002A4305 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				089B4F0622224E0A00CF7CA3 /* HomeModel.h */,
+				089B4F0722224E0A00CF7CA3 /* HomeModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		809823B2221BCE4D00F0A48B = {
 			isa = PBXGroup;
 			children = (
@@ -88,9 +125,9 @@
 			children = (
 				809823BE221BCE4D00F0A48B /* AppDelegate.h */,
 				809823BF221BCE4D00F0A48B /* AppDelegate.m */,
+				806E5E4722240958002A4305 /* Model */,
+				806E5E4622240950002A4305 /* ViewModel */,
 				809823DC221BDD0D00F0A48B /* View */,
-				809823DB221BDD0300F0A48B /* ViewModel */,
-				809823DA221BDCFB00F0A48B /* Model */,
 				809823D9221BDCE300F0A48B /* Controller */,
 				809823C4221BCE4D00F0A48B /* Main.storyboard */,
 				809823C7221BCE4E00F0A48B /* Assets.xcassets */,
@@ -108,6 +145,10 @@
 			children = (
 				809823D6221BDAEB00F0A48B /* HYDNetwork.h */,
 				809823D7221BDAEB00F0A48B /* HYDNetwork.m */,
+				806E5E8722263E50002A4305 /* NSString+StringSize.h */,
+				806E5E8822263E50002A4305 /* NSString+StringSize.m */,
+				806E5E8622263E50002A4305 /* UIImage+addText.h */,
+				806E5E8522263E50002A4305 /* UIImage+addText.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -117,26 +158,10 @@
 			children = (
 				809823C1221BCE4D00F0A48B /* ViewController.h */,
 				809823C2221BCE4D00F0A48B /* ViewController.m */,
+				806E5E8B22266987002A4305 /* SearchViewController.h */,
+				806E5E8C22266987002A4305 /* SearchViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		809823DA221BDCFB00F0A48B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				089B4F0622224E0A00CF7CA3 /* HeaderImageModel.h */,
-				089B4F0722224E0A00CF7CA3 /* HeaderImageModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		809823DB221BDD0300F0A48B /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				089B4F0322224D9A00CF7CA3 /* HomeViewModel.h */,
-				089B4F0422224D9A00CF7CA3 /* HomeViewModel.m */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		809823DC221BDD0D00F0A48B /* View */ = {
@@ -256,6 +281,7 @@
 				"${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/Material-Design-Iconic-Font.ttf",
 				"${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/octicons.ttf",
 				"${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/zocial-regular-webfont.ttf",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/MWPhotoBrowser/MWPhotoBrowser.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -266,6 +292,7 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Material-Design-Iconic-Font.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/octicons.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/zocial-regular-webfont.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MWPhotoBrowser.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,8 +311,13 @@
 				809823CE221BCE4F00F0A48B /* main.m in Sources */,
 				809823DF221BDD5A00F0A48B /* HomeScrollView.m in Sources */,
 				089B4F0522224D9A00CF7CA3 /* HomeViewModel.m in Sources */,
+				806E5E5022250C8F002A4305 /* ExploreViewModel.m in Sources */,
 				809823D8221BDAEB00F0A48B /* HYDNetwork.m in Sources */,
-				089B4F0822224E0A00CF7CA3 /* HeaderImageModel.m in Sources */,
+				806E5E4D222409C5002A4305 /* NewViewModel.m in Sources */,
+				089B4F0822224E0A00CF7CA3 /* HomeModel.m in Sources */,
+				806E5E8A22263E51002A4305 /* NSString+StringSize.m in Sources */,
+				806E5E8922263E51002A4305 /* UIImage+addText.m in Sources */,
+				806E5E8D22266987002A4305 /* SearchViewController.m in Sources */,
 				809823C0221BCE4D00F0A48B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

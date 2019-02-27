@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import  "HomeScrollView.h"
+#import "SearchViewController.h"
 @interface ViewController ()
 @property (nonatomic,strong) HomeScrollView *MainScrollView;
 
@@ -29,8 +30,25 @@
     
     
     [self.view addSubview:self.MainScrollView];
+    
+    [[self.MainScrollView.searchBarNode listenedBy:self] withBlock:^(UISearchBar * _Nullable next) {
+        
+        SearchViewController *VC = [[SearchViewController alloc]init];
+        [self.navigationController pushViewController:VC animated:YES];
+    }];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
 
+}
+-(void)viewWillDisappear:(BOOL)animated
+
+{
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.hidden = NO;
+}
 @end

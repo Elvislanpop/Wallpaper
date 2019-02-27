@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HeaderImageModel.h"
+#import "HomeModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeViewModel : NSObject

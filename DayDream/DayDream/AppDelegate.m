@@ -15,6 +15,8 @@
  */
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import <SDImageCache.h>
+#import <SDWebImageDownloader.h>
 @interface AppDelegate ()
 
 @end
@@ -28,6 +30,8 @@
     UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:[ViewController new]];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
+    
+
     return YES;
 }
 
@@ -58,5 +62,10 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+//内存警告
+-(void)applicationDidReceiveMemoryWarning:(UIApplication *)application
+{
+
+}
 
 @end
