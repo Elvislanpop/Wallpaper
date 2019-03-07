@@ -9,6 +9,7 @@
 #ifndef DayDream_pch
 #define DayDream_pch
 #import <Masonry.h>
+#import <FontAwesomeKit.h>
 #import <AFNetworking.h>
 #import <YYCache.h>
 #import <EasyReact.h>

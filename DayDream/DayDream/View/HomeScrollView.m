@@ -11,7 +11,7 @@
 #import "NewViewModel.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "ExploreViewModel.h"
-#import "UIImage+addText.h"
+
 @interface HomeScrollView()<UIScrollViewDelegate,UISearchBarDelegate>
 
 /**
@@ -60,10 +60,7 @@
 @property (nonatomic,strong) NSMutableArray *themeGroup;
 
 
-/**
- 顶部先行隐藏的视图
- */
-@property (nonatomic,strong) UIView * navigationView;
+
 
 
 @end
@@ -81,8 +78,9 @@
 {
     if (self = [super initWithFrame:frame]) {
         
-        
+        self.buttonNode = [EZRMutableNode new];
         self.searchBarNode = [EZRMutableNode new];
+        self.offsetYNode = [EZRMutableNode new];
         self.per_page = 30;
         self.backgroundColor = [UIColor whiteColor];
         self.delegate = self;
@@ -102,14 +100,12 @@
         
         //add  ImageView - > headerImageView
         UIImageView *imageView = [[UIImageView alloc]init];
-      
+        imageView.userInteractionEnabled = YES;
         imageView.backgroundColor = [randomColor colorWithAlphaComponent:0.7];
         imageView.contentMode = UIViewContentModeScaleAspectFill;
         imageView.clipsToBounds = YES;
-        
-       
         [self addSubview:imageView];
-        imageView.userInteractionEnabled = YES;
+       
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.equalTo(self.contentView);
             make.height.mas_equalTo(HeaderImageHeight);
@@ -120,6 +116,7 @@
         
         //顶部遮罩视图
         UIView *bgHeaderImageView = [UIView new];
+        bgHeaderImageView.userInteractionEnabled = NO;
         bgHeaderImageView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
         [imageView addSubview:bgHeaderImageView];
         [bgHeaderImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -142,12 +139,29 @@
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setImage:[UIImage imageNamed:@"Atom"] forState:0];
         [imageView addSubview:button];
+        button.tag = 101;
         [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
         [button mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(imageView).offset(10.0);
             make.top.equalTo(imageView).offset(IPhoneX?44:20);
             make.width.height.mas_equalTo(40.0);
         }];
+        
+        //矢量icon ，抛弃PNG 图片
+        UIButton *setting = [UIButton buttonWithType:UIButtonTypeCustom];
+        FAKIonIcons *settingIcon = [FAKIonIcons gearAIconWithSize:30.f];
+        setting.tag = 102;
+        [settingIcon addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]];
+        
+        [setting setAttributedTitle:[settingIcon attributedString] forState:0];
+        [imageView addSubview:setting];
+        [setting mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.equalTo(button);
+            make.right.equalTo(imageView).offset(-10.0);
+            make.width.height.mas_equalTo(40.0);
+        }];
+        [setting addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+        
         
         UISearchBar *searchBar = [[UISearchBar alloc]init];
         searchBar.placeholder =@"Search photos";
@@ -174,20 +188,7 @@
             make.bottom.equalTo(searchBar.mas_top).offset(-10.0);
         }];
         
-        //顶部搜索栏 视图，先行隐藏
-        UIView *navigationBar = [UIView new];
-       // navigationBar.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.8];
-        [imageView addSubview:navigationBar];
-        navigationBar.hidden = YES;
-        [navigationBar mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.left.right.equalTo(imageView);
-          
-            make.height.mas_equalTo(IPhoneX?88:64);
-        }];
-        self.navigationView = navigationBar;
-        
-        
-        
+    
         //add Explore Title (static)
         
         UILabel *explore = [[UILabel alloc]init];
@@ -295,12 +296,17 @@
         for (int j = 0; j < self.per_page; j++) {
             UIImageView *newView = [[UIImageView alloc]init];
             newView.backgroundColor = [randomColor colorWithAlphaComponent:0.8];
+            newView.userInteractionEnabled = YES;
             [self.contentView addSubview:newView];
             [newView mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.equalTo(NewLabel.mas_bottom).offset(10.0 + ScreenHeight/2.0 *j);
                 make.left.right.equalTo(self.contentView);
                 make.height.mas_equalTo(ScreenHeight/2.0 -2);
             }];
+            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapClick:)];
+            [newView addGestureRecognizer:tap];
+            
+            
             UILabel *author = [[UILabel alloc]init];
             author.textColor = [UIColor whiteColor];
             author.font = [UIFont systemFontOfSize:13.f];
@@ -318,10 +324,11 @@
         }
         
         [self.contentView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.bottom.equalTo(endView.mas_bottom);
+             make.bottom.equalTo(endView.mas_bottom);
+           
         }];
-        
-        //[self loadNetworking];
+       
+       // [self loadNetworking];
     }
     return self;
 }
@@ -348,7 +355,7 @@
 
     }];
 
-         NSTimer *timer =[NSTimer scheduledTimerWithTimeInterval:15.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
+    NSTimer *timer =[NSTimer scheduledTimerWithTimeInterval:15.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
          HomeVM.param.value = @{@"collections":@"",@"client_id":API_Client_ID};
 
     }];
@@ -382,9 +389,7 @@
             UIImageView *imageView = [self.insideImageViewGroup objectAtIndex:i];
             UILabel *title  = [self.themeGroup objectAtIndex:i];
             [imageView sd_setImageWithURL:[NSURL URLWithString:url[@"regular"]] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-
-            
-                   title.text = dic[@"title"];
+                       title.text = dic[@"title"];
             }];
 
         }
@@ -394,7 +399,7 @@
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGFloat offsetY = scrollView.contentOffset.y;
-    CGFloat navBarHeight = IPhoneX;
+  
     // HeadImageView  stretching
     if (offsetY < 0) {
         CGFloat value = -offsetY;
@@ -405,18 +410,9 @@
             make.top.equalTo(self.contentView).offset(offsetY);
             make.height.mas_equalTo(-offsetY);
         }];
-       
-//        if (offsetY > -150) {
-//
-//
-//        }
-        
+        self.offsetYNode.value = [NSNumber numberWithFloat:value];
     }
-    else
-    {
-        self.navigationView.hidden  = NO;
-        self.navigationView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.7];
-    }
+    
 }
 
 #pragma searchBar Delegate
@@ -428,6 +424,11 @@
 #pragma buttonClick
 -(void)buttonClick:(UIButton *)sender
 {
-    NSLog(@"2313333");
+    self.buttonNode.value  = sender;
+    
+}
+-(void)tapClick:(UIButton *)sender
+{
+    NSLog(@"2313123");
 }
 @end

@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeScrollView : UIScrollView
 @property (nonatomic,strong) EZRMutableNode <UISearchBar *>*searchBarNode;
+@property (nonatomic,strong) EZRMutableNode <NSNumber *> *offsetYNode;
+@property (nonatomic,strong) EZRMutableNode <UIButton *> *buttonNode;
 
 -(instancetype)initWithFrame:(CGRect)frame;
 @end

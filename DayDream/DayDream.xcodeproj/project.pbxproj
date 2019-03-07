@@ -12,9 +12,8 @@
 		1B99D7E1D984A289ED19B39A /* libPods-DayDream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 623469BD00EF4D4574215A9C /* libPods-DayDream.a */; };
 		806E5E4D222409C5002A4305 /* NewViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 806E5E4C222409C5002A4305 /* NewViewModel.m */; };
 		806E5E5022250C8F002A4305 /* ExploreViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 806E5E4F22250C8F002A4305 /* ExploreViewModel.m */; };
-		806E5E8922263E51002A4305 /* UIImage+addText.m in Sources */ = {isa = PBXBuildFile; fileRef = 806E5E8522263E50002A4305 /* UIImage+addText.m */; };
-		806E5E8A22263E51002A4305 /* NSString+StringSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 806E5E8822263E50002A4305 /* NSString+StringSize.m */; };
 		806E5E8D22266987002A4305 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 806E5E8C22266987002A4305 /* SearchViewController.m */; };
+		806E5EB3222E7A2E002A4305 /* PopIntroductionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 806E5EB2222E7A2E002A4305 /* PopIntroductionController.m */; };
 		809823C0221BCE4D00F0A48B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 809823BF221BCE4D00F0A48B /* AppDelegate.m */; };
 		809823C3221BCE4D00F0A48B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 809823C2221BCE4D00F0A48B /* ViewController.m */; };
 		809823C6221BCE4D00F0A48B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 809823C4221BCE4D00F0A48B /* Main.storyboard */; };
@@ -37,12 +36,10 @@
 		806E5E4C222409C5002A4305 /* NewViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewViewModel.m; sourceTree = "<group>"; };
 		806E5E4E22250C8F002A4305 /* ExploreViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExploreViewModel.h; sourceTree = "<group>"; };
 		806E5E4F22250C8F002A4305 /* ExploreViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExploreViewModel.m; sourceTree = "<group>"; };
-		806E5E8522263E50002A4305 /* UIImage+addText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+addText.m"; sourceTree = "<group>"; };
-		806E5E8622263E50002A4305 /* UIImage+addText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+addText.h"; sourceTree = "<group>"; };
-		806E5E8722263E50002A4305 /* NSString+StringSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringSize.h"; sourceTree = "<group>"; };
-		806E5E8822263E50002A4305 /* NSString+StringSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StringSize.m"; sourceTree = "<group>"; };
 		806E5E8B22266987002A4305 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		806E5E8C22266987002A4305 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		806E5EB1222E7A2E002A4305 /* PopIntroductionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopIntroductionController.h; sourceTree = "<group>"; };
+		806E5EB2222E7A2E002A4305 /* PopIntroductionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopIntroductionController.m; sourceTree = "<group>"; };
 		809823BB221BCE4D00F0A48B /* DayDream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayDream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		809823BE221BCE4D00F0A48B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		809823BF221BCE4D00F0A48B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -102,6 +99,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		806E5EB0222E79C9002A4305 /* Assist */ = {
+			isa = PBXGroup;
+			children = (
+				806E5EB1222E7A2E002A4305 /* PopIntroductionController.h */,
+				806E5EB2222E7A2E002A4305 /* PopIntroductionController.m */,
+			);
+			path = Assist;
+			sourceTree = "<group>";
+		};
 		809823B2221BCE4D00F0A48B = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +140,7 @@
 				809823C9221BCE4F00F0A48B /* LaunchScreen.storyboard */,
 				809823CC221BCE4F00F0A48B /* Info.plist */,
 				809823CD221BCE4F00F0A48B /* main.m */,
+				806E5EB0222E79C9002A4305 /* Assist */,
 				809823D5221BDADA00F0A48B /* Tool */,
 				809823D4221BDA3600F0A48B /* DayDream.pch */,
 			);
@@ -145,10 +152,6 @@
 			children = (
 				809823D6221BDAEB00F0A48B /* HYDNetwork.h */,
 				809823D7221BDAEB00F0A48B /* HYDNetwork.m */,
-				806E5E8722263E50002A4305 /* NSString+StringSize.h */,
-				806E5E8822263E50002A4305 /* NSString+StringSize.m */,
-				806E5E8622263E50002A4305 /* UIImage+addText.h */,
-				806E5E8522263E50002A4305 /* UIImage+addText.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -315,8 +318,7 @@
 				809823D8221BDAEB00F0A48B /* HYDNetwork.m in Sources */,
 				806E5E4D222409C5002A4305 /* NewViewModel.m in Sources */,
 				089B4F0822224E0A00CF7CA3 /* HomeModel.m in Sources */,
-				806E5E8A22263E51002A4305 /* NSString+StringSize.m in Sources */,
-				806E5E8922263E51002A4305 /* UIImage+addText.m in Sources */,
+				806E5EB3222E7A2E002A4305 /* PopIntroductionController.m in Sources */,
 				806E5E8D22266987002A4305 /* SearchViewController.m in Sources */,
 				809823C0221BCE4D00F0A48B /* AppDelegate.m in Sources */,
 			);
