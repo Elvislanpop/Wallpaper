@@ -12,7 +12,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "ExploreViewModel.h"
 
-@interface HomeScrollView()<UIScrollViewDelegate,UISearchBarDelegate>
+@interface HomeScrollView()<UIScrollViewDelegate,UISearchBarDelegate,UISearchControllerDelegate>
 
 /**
  顶部图片视图 可缩放，
@@ -59,6 +59,7 @@
  */
 @property (nonatomic,strong) NSMutableArray *themeGroup;
 
+@property (nonatomic,strong) UISearchController *searchVC;
 
 
 
@@ -67,7 +68,19 @@
 @implementation HomeScrollView
 
 
-
+#pragma getter
+-(UISearchController *)searchVC
+{
+    if (!_searchVC) {
+        _searchVC = [[UISearchController alloc]initWithSearchResultsController:nil];
+        _searchVC.delegate = self;
+        
+        _searchVC.searchBar.searchBarStyle = UISearchBarStyleMinimal;
+        _searchVC.dimsBackgroundDuringPresentation = YES;
+        
+    }
+    return _searchVC;
+}
 /**
  init MainScrollView
 
@@ -163,14 +176,14 @@
         [setting addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
         
         
-        UISearchBar *searchBar = [[UISearchBar alloc]init];
-        searchBar.placeholder =@"Search photos";
-        searchBar.searchBarStyle = UISearchBarIconSearch;
-        searchBar.backgroundImage = [UIImage new];
-        searchBar.delegate = self;
-        searchBar.barStyle = UIBarStyleBlack;
-        [imageView addSubview:searchBar];
-        [searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
+//        UISearchBar *searchBar = [[UISearchBar alloc]init];
+//        searchBar.placeholder =@"Search photos";
+//        searchBar.searchBarStyle = UISearchBarIconSearch;
+//        searchBar.backgroundImage = [UIImage new];
+//        searchBar.delegate = self;
+//        searchBar.barStyle = UIBarStyleBlack;
+        [imageView addSubview:self.searchVC.searchBar];
+        [self.searchVC.searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(imageView);
             make.centerY.equalTo(imageView).offset(15.0);
             make.width.mas_equalTo(ScreenWidth - 40);
@@ -185,7 +198,7 @@
         [imageView addSubview:mainTitle];
         [mainTitle mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(imageView);
-            make.bottom.equalTo(searchBar.mas_top).offset(-10.0);
+            make.bottom.equalTo(self.searchVC.searchBar.mas_top).offset(-10.0);
         }];
         
     
@@ -338,8 +351,6 @@
     //header Image Request
     HomeViewModel *HomeVM = [HomeViewModel new];
     HomeVM.param.value = @{@"collections":@"",@"client_id":API_Client_ID};
-
-
     [[HomeVM.result listenedBy:self] withBlock:^(ExampleModelName * _Nullable rootModel) {
         Urls *urlGroups = rootModel.urls;
         User *user = rootModel.user;
@@ -418,6 +429,7 @@
 #pragma searchBar Delegate
 -(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
 {
+  
     self.searchBarNode.value = searchBar;
     [searchBar resignFirstResponder];
 }
