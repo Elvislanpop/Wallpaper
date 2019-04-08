@@ -91,9 +91,7 @@
 {
     if (self = [super initWithFrame:frame]) {
         
-        self.buttonNode = [EZRMutableNode new];
-        self.searchBarNode = [EZRMutableNode new];
-        self.offsetYNode = [EZRMutableNode new];
+        //self.offsetYNode = [EZRMutableNode new];
         self.per_page = 30;
         self.backgroundColor = [UIColor whiteColor];
         self.delegate = self;
@@ -148,58 +146,16 @@
             make.centerX.equalTo(imageView);
         }];
         _headImageViewName = location;
-        
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [button setImage:[UIImage imageNamed:@"Atom"] forState:0];
-        [imageView addSubview:button];
-        button.tag = 101;
-        [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-        [button mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(imageView).offset(10.0);
-            make.top.equalTo(imageView).offset(IPhoneX?44:20);
-            make.width.height.mas_equalTo(40.0);
-        }];
-        
-        //矢量icon ，抛弃PNG 图片
-        UIButton *setting = [UIButton buttonWithType:UIButtonTypeCustom];
-        FAKIonIcons *settingIcon = [FAKIonIcons gearAIconWithSize:30.f];
-        setting.tag = 102;
-        [settingIcon addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]];
-        
-        [setting setAttributedTitle:[settingIcon attributedString] forState:0];
-        [imageView addSubview:setting];
-        [setting mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerY.equalTo(button);
-            make.right.equalTo(imageView).offset(-10.0);
-            make.width.height.mas_equalTo(40.0);
-        }];
-        [setting addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-        
-        
-//        UISearchBar *searchBar = [[UISearchBar alloc]init];
-//        searchBar.placeholder =@"Search photos";
-//        searchBar.searchBarStyle = UISearchBarIconSearch;
-//        searchBar.backgroundImage = [UIImage new];
-//        searchBar.delegate = self;
-//        searchBar.barStyle = UIBarStyleBlack;
-        [imageView addSubview:self.searchVC.searchBar];
-        [self.searchVC.searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerX.equalTo(imageView);
-            make.centerY.equalTo(imageView).offset(15.0);
-            make.width.mas_equalTo(ScreenWidth - 40);
-            make.height.mas_equalTo(40.0);
-        }];
-      
-        
-        UILabel *mainTitle = [[UILabel alloc]init];
-        mainTitle.textColor = [UIColor whiteColor];
-        mainTitle.text =@"Photos for everyone";
-        mainTitle.font = [UIFont boldSystemFontOfSize:25.f];
-        [imageView addSubview:mainTitle];
-        [mainTitle mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerX.equalTo(imageView);
-            make.bottom.equalTo(self.searchVC.searchBar.mas_top).offset(-10.0);
-        }];
+    
+//        UILabel *mainTitle = [[UILabel alloc]init];
+//        mainTitle.textColor = [UIColor whiteColor];
+//        mainTitle.text =@"Photos for everyone";
+//        mainTitle.font = [UIFont boldSystemFontOfSize:25.f];
+//        [imageView addSubview:mainTitle];
+//        [mainTitle mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.center.equalTo(imageView);
+//           
+//        }];
         
     
         //add Explore Title (static)
@@ -415,30 +371,17 @@
     if (offsetY < 0) {
         CGFloat value = -offsetY;
         CGFloat MAX = HeaderImageHeight;
-        self.headerImageView.alpha = value/MAX;
+       // self.headerImageView.alpha = value/MAX;
         [self.headerImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.left.right.equalTo(self.contentView);
             make.top.equalTo(self.contentView).offset(offsetY);
             make.height.mas_equalTo(-offsetY);
         }];
-        self.offsetYNode.value = [NSNumber numberWithFloat:value];
+        //self.offsetYNode.value = [NSNumber numberWithFloat:value];
     }
     
 }
 
-#pragma searchBar Delegate
--(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
-{
-  
-    self.searchBarNode.value = searchBar;
-    [searchBar resignFirstResponder];
-}
-#pragma buttonClick
--(void)buttonClick:(UIButton *)sender
-{
-    self.buttonNode.value  = sender;
-    
-}
 -(void)tapClick:(UIButton *)sender
 {
     NSLog(@"2313123");

@@ -12,7 +12,6 @@
 		1B99D7E1D984A289ED19B39A /* libPods-DayDream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 623469BD00EF4D4574215A9C /* libPods-DayDream.a */; };
 		806E5E4D222409C5002A4305 /* NewViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 806E5E4C222409C5002A4305 /* NewViewModel.m */; };
 		806E5E5022250C8F002A4305 /* ExploreViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 806E5E4F22250C8F002A4305 /* ExploreViewModel.m */; };
-		806E5E8D22266987002A4305 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 806E5E8C22266987002A4305 /* SearchViewController.m */; };
 		806E5EB3222E7A2E002A4305 /* PopIntroductionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 806E5EB2222E7A2E002A4305 /* PopIntroductionController.m */; };
 		809823C0221BCE4D00F0A48B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 809823BF221BCE4D00F0A48B /* AppDelegate.m */; };
 		809823C3221BCE4D00F0A48B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 809823C2221BCE4D00F0A48B /* ViewController.m */; };
@@ -22,6 +21,7 @@
 		809823CE221BCE4F00F0A48B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 809823CD221BCE4F00F0A48B /* main.m */; };
 		809823D8221BDAEB00F0A48B /* HYDNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 809823D7221BDAEB00F0A48B /* HYDNetwork.m */; };
 		809823DF221BDD5A00F0A48B /* HomeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 809823DE221BDD5A00F0A48B /* HomeScrollView.m */; };
+		80A35CDE225B3E7F00942017 /* SearchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A35CDD225B3E7F00942017 /* SearchTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +36,6 @@
 		806E5E4C222409C5002A4305 /* NewViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewViewModel.m; sourceTree = "<group>"; };
 		806E5E4E22250C8F002A4305 /* ExploreViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExploreViewModel.h; sourceTree = "<group>"; };
 		806E5E4F22250C8F002A4305 /* ExploreViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExploreViewModel.m; sourceTree = "<group>"; };
-		806E5E8B22266987002A4305 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		806E5E8C22266987002A4305 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		806E5EB1222E7A2E002A4305 /* PopIntroductionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopIntroductionController.h; sourceTree = "<group>"; };
 		806E5EB2222E7A2E002A4305 /* PopIntroductionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopIntroductionController.m; sourceTree = "<group>"; };
 		809823BB221BCE4D00F0A48B /* DayDream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayDream.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +53,8 @@
 		809823D7221BDAEB00F0A48B /* HYDNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYDNetwork.m; sourceTree = "<group>"; };
 		809823DD221BDD5A00F0A48B /* HomeScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeScrollView.h; sourceTree = "<group>"; };
 		809823DE221BDD5A00F0A48B /* HomeScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeScrollView.m; sourceTree = "<group>"; };
+		80A35CDC225B3E7F00942017 /* SearchTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchTableView.h; sourceTree = "<group>"; };
+		80A35CDD225B3E7F00942017 /* SearchTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,8 +161,6 @@
 			children = (
 				809823C1221BCE4D00F0A48B /* ViewController.h */,
 				809823C2221BCE4D00F0A48B /* ViewController.m */,
-				806E5E8B22266987002A4305 /* SearchViewController.h */,
-				806E5E8C22266987002A4305 /* SearchViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -172,6 +170,8 @@
 			children = (
 				809823DD221BDD5A00F0A48B /* HomeScrollView.h */,
 				809823DE221BDD5A00F0A48B /* HomeScrollView.m */,
+				80A35CDC225B3E7F00942017 /* SearchTableView.h */,
+				80A35CDD225B3E7F00942017 /* SearchTableView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -311,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				809823C3221BCE4D00F0A48B /* ViewController.m in Sources */,
+				80A35CDE225B3E7F00942017 /* SearchTableView.m in Sources */,
 				809823CE221BCE4F00F0A48B /* main.m in Sources */,
 				809823DF221BDD5A00F0A48B /* HomeScrollView.m in Sources */,
 				089B4F0522224D9A00CF7CA3 /* HomeViewModel.m in Sources */,
@@ -319,7 +320,6 @@
 				806E5E4D222409C5002A4305 /* NewViewModel.m in Sources */,
 				089B4F0822224E0A00CF7CA3 /* HomeModel.m in Sources */,
 				806E5EB3222E7A2E002A4305 /* PopIntroductionController.m in Sources */,
-				806E5E8D22266987002A4305 /* SearchViewController.m in Sources */,
 				809823C0221BCE4D00F0A48B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -41,7 +41,7 @@
     }];
     
     UILabel *version = [[UILabel alloc]init];
-    version.text = @"V1.0.0";
+    version.text = @" V1.0.0";
     version.textColor = [UIColor lightGrayColor];
     version.font = [UIFont systemFontOfSize:16.f];
     [self.view addSubview:version];
@@ -52,7 +52,7 @@
     }];
     
     UIButton *website = [UIButton buttonWithType:UIButtonTypeCustom];
-    [website setTitle:@"Visit daydream.top" forState:UIControlStateNormal];
+    [website setTitle:@" Visit daydream.top" forState:UIControlStateNormal];
     [website setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     website.titleLabel.font = [UIFont systemFontOfSize:16.f];
     [self.view addSubview:website];
@@ -64,7 +64,7 @@
     
     UIButton *license = [UIButton buttonWithType:UIButtonTypeCustom];
     [license setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [license setTitle:@"License" forState:UIControlStateNormal];
+    [license setTitle:@" License" forState:UIControlStateNormal];
     license.titleLabel.font = [UIFont systemFontOfSize:16.f];
     [self.view addSubview:license];
     [license mas_makeConstraints:^(MASConstraintMaker *make) {
