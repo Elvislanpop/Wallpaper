@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ThemeViewController : UIViewController
+@property (nonatomic,strong) NSString *requestTitle;
 
 @end
 

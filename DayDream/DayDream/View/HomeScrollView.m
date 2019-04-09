@@ -54,11 +54,15 @@
  */
 @property (nonatomic,strong) NSMutableArray *insideImageViewGroup;
 
+
 /**
  Explore 主题标题
  */
 @property (nonatomic,strong) NSMutableArray *themeGroup;
 
+/**
+ 搜索控制器
+ */
 @property (nonatomic,strong) UISearchController *searchVC;
 
 
@@ -91,8 +95,10 @@
 {
     if (self = [super initWithFrame:frame]) {
         self.TapNode = [EZRMutableNode new];
-        //self.offsetYNode = [EZRMutableNode new];
+        self.offsetYNode = [EZRMutableNode new];
         self.per_page = 30;
+        self.exploreTitle = [NSMutableArray array];
+        
         self.backgroundColor = [UIColor whiteColor];
         self.delegate = self;
         self.contentInset = UIEdgeInsetsMake(HeaderImageHeight, 0, 0, 0);
@@ -294,7 +300,7 @@
            
         }];
        
-       // [self loadNetworking];
+        [self loadNetworking];
     }
     return self;
 }
@@ -354,6 +360,7 @@
             UILabel *title  = [self.themeGroup objectAtIndex:i];
             [imageView sd_setImageWithURL:[NSURL URLWithString:url[@"regular"]] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                        title.text = dic[@"title"];
+                [self.exploreTitle addObject:dic[@"title"]];
             }];
 
         }
@@ -374,7 +381,7 @@
             make.top.equalTo(self.contentView).offset(offsetY);
             make.height.mas_equalTo(-offsetY);
         }];
-        //self.offsetYNode.value = [NSNumber numberWithFloat:value];
+        self.offsetYNode.value = [NSNumber numberWithFloat:value];
     }
     
 }

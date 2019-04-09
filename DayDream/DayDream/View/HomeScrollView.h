@@ -11,8 +11,22 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeScrollView : UIScrollView
-//@property (nonatomic,strong) EZRMutableNode <NSNumber *> *offsetYNode;
+
+/**
+ 偏移量监听节点
+ */
+@property (nonatomic,strong) EZRMutableNode <NSNumber *> *offsetYNode;
+
+/**
+ 手势单词点击节点
+ */
 @property (nonatomic,strong) EZRMutableNode *TapNode;
+
+
+/**
+ Explore标题
+ */
+@property (nonatomic,strong) NSMutableArray *exploreTitle;
 
 -(instancetype)initWithFrame:(CGRect)frame;
 @end

@@ -27,7 +27,7 @@
         SearchTableView *searchView = [[SearchTableView alloc]initWithFrame:CGRectMake(0, IPhoneX?88:64, ScreenWidth, IPhoneX?ScreenHeight-88:ScreenHeight -64)];
         [_searchVC.view addSubview:searchView];
         _searchVC.searchBar.searchBarStyle = UISearchBarStyleMinimal;
-
+      
     }
     return _searchVC;
 }
@@ -37,6 +37,7 @@
     self.MainScrollView = [[HomeScrollView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [self.view addSubview:self.MainScrollView];
 
+    
     if (@available(iOS 11,*)) {
         [self.MainScrollView setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
     }
@@ -45,33 +46,33 @@
          [self automaticallyAdjustsScrollViewInsets];
     }
     
-    [self setNavigationBar];
+   
     [self setListenObject];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-   
+    [self setNavigationBar];
 
 }
 -(void)viewWillDisappear:(BOOL)animated
 
 {
     [super viewWillDisappear:animated];
-   
+    [self.navigationController.navigationBar setLargeTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]}];
 }
 -(void)setNavigationBar
 {
     self.title = @"Photos for everyone";
     self.navigationItem.largeTitleDisplayMode = UINavigationItemLargeTitleDisplayModeAutomatic;
     self.navigationController.navigationBar.prefersLargeTitles = YES;
-    self.navigationController.navigationBar.translucent = YES;
-  
     [self.navigationController.navigationBar setLargeTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    UIColor *color = [[UIColor whiteColor] colorWithAlphaComponent:0.0];
     
-    [self.navigationController.navigationBar setBackgroundImage:[self imageWithColor:color] forBarMetrics:UIBarMetricsDefault];
+    UIColor *color = [[UIColor redColor] colorWithAlphaComponent:0.0];
+    UIImage *image = [UIImage new];
+    
+    [self.navigationController.navigationBar setBackgroundImage:[image imageWithColor:color] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:[UIImage new]];
     
   //  self.navigationItem.hidesSearchBarWhenScrolling =NO;
@@ -105,10 +106,28 @@
         NSLog(@"---%ld ---",[sender view].tag);
         if ([sender view].tag < 200) {
             ThemeViewController *theme = [ThemeViewController new];
+            theme.requestTitle =  [self.MainScrollView.exploreTitle objectAtIndex:[sender view].tag -100];
             [self.navigationController pushViewController:theme animated:YES];
         }
         
     } on:dispatch_get_main_queue()];
+    
+    [[self.MainScrollView.offsetYNode listenedBy:self] withBlock:^(NSNumber * _Nullable offsetY) {
+        NSLog(@"%ff",[offsetY floatValue]);
+         UIImage *image = [UIImage new];
+        if ([offsetY floatValue] > 15) {
+            UIColor *color = [[UIColor whiteColor] colorWithAlphaComponent:0.0];
+           
+            [self.navigationController.navigationBar setBackgroundImage:[image imageWithColor:color] forBarMetrics:UIBarMetricsDefault];
+        }
+        else
+        {
+            UIColor *color = [[UIColor whiteColor] colorWithAlphaComponent:1.0];
+            [self.navigationController.navigationBar setBackgroundImage:[image imageWithColor:color] forBarMetrics:UIBarMetricsDefault];
+        }
+    
+    }];
+    
 }
 -(void)buttonClick:(UIButton *)button
 {
@@ -146,21 +165,5 @@
     
 }
 
-- (UIImage *)imageWithColor:(UIColor *)color {
-    
-    //创建1像素区域并开始图片绘图
-    CGRect rect = CGRectMake(0, 0, 1, 1);
-    UIGraphicsBeginImageContext(rect.size);
-    
-    //创建画板并填充颜色和区域
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context, [color CGColor]);
-    CGContextFillRect(context, rect);
-    
-    //从画板上获取图片并关闭图片绘图
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return image;
-}
+
 @end

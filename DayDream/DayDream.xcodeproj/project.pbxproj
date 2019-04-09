@@ -23,6 +23,9 @@
 		809823D8221BDAEB00F0A48B /* HYDNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 809823D7221BDAEB00F0A48B /* HYDNetwork.m */; };
 		809823DF221BDD5A00F0A48B /* HomeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 809823DE221BDD5A00F0A48B /* HomeScrollView.m */; };
 		80A35CDE225B3E7F00942017 /* SearchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A35CDD225B3E7F00942017 /* SearchTableView.m */; };
+		80B593C3225C6ACF00944C25 /* UIImage+ImageColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B593C2225C6ACF00944C25 /* UIImage+ImageColor.m */; };
+		80B593C7225C6E0D00944C25 /* ThemeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B593C6225C6E0D00944C25 /* ThemeListCell.m */; };
+		80B593CA225C9F3B00944C25 /* ThemeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B593C9225C9F3B00944C25 /* ThemeViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,12 @@
 		809823DE221BDD5A00F0A48B /* HomeScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeScrollView.m; sourceTree = "<group>"; };
 		80A35CDC225B3E7F00942017 /* SearchTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchTableView.h; sourceTree = "<group>"; };
 		80A35CDD225B3E7F00942017 /* SearchTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchTableView.m; sourceTree = "<group>"; };
+		80B593C1225C6ACF00944C25 /* UIImage+ImageColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageColor.h"; sourceTree = "<group>"; };
+		80B593C2225C6ACF00944C25 /* UIImage+ImageColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageColor.m"; sourceTree = "<group>"; };
+		80B593C5225C6E0D00944C25 /* ThemeListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThemeListCell.h; sourceTree = "<group>"; };
+		80B593C6225C6E0D00944C25 /* ThemeListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThemeListCell.m; sourceTree = "<group>"; };
+		80B593C8225C9F3B00944C25 /* ThemeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThemeViewModel.h; sourceTree = "<group>"; };
+		80B593C9225C9F3B00944C25 /* ThemeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThemeViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +98,8 @@
 				806E5E4C222409C5002A4305 /* NewViewModel.m */,
 				806E5E4E22250C8F002A4305 /* ExploreViewModel.h */,
 				806E5E4F22250C8F002A4305 /* ExploreViewModel.m */,
+				80B593C8225C9F3B00944C25 /* ThemeViewModel.h */,
+				80B593C9225C9F3B00944C25 /* ThemeViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -134,6 +145,7 @@
 			children = (
 				809823BE221BCE4D00F0A48B /* AppDelegate.h */,
 				809823BF221BCE4D00F0A48B /* AppDelegate.m */,
+				80B593C4225C6DDD00944C25 /* UITableViewCell */,
 				806E5E4722240958002A4305 /* Model */,
 				806E5E4622240950002A4305 /* ViewModel */,
 				809823DC221BDD0D00F0A48B /* View */,
@@ -155,6 +167,8 @@
 			children = (
 				809823D6221BDAEB00F0A48B /* HYDNetwork.h */,
 				809823D7221BDAEB00F0A48B /* HYDNetwork.m */,
+				80B593C1225C6ACF00944C25 /* UIImage+ImageColor.h */,
+				80B593C2225C6ACF00944C25 /* UIImage+ImageColor.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -179,6 +193,15 @@
 				80A35CDD225B3E7F00942017 /* SearchTableView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		80B593C4225C6DDD00944C25 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				80B593C5225C6E0D00944C25 /* ThemeListCell.h */,
+				80B593C6225C6E0D00944C25 /* ThemeListCell.m */,
+			);
+			path = UITableViewCell;
 			sourceTree = "<group>";
 		};
 		99A02967DC97A17C8E318334 /* Pods */ = {
@@ -323,8 +346,11 @@
 				089B4F0522224D9A00CF7CA3 /* HomeViewModel.m in Sources */,
 				806E5E5022250C8F002A4305 /* ExploreViewModel.m in Sources */,
 				809823D8221BDAEB00F0A48B /* HYDNetwork.m in Sources */,
+				80B593C3225C6ACF00944C25 /* UIImage+ImageColor.m in Sources */,
+				80B593CA225C9F3B00944C25 /* ThemeViewModel.m in Sources */,
 				806E5E4D222409C5002A4305 /* NewViewModel.m in Sources */,
 				089B4F0822224E0A00CF7CA3 /* HomeModel.m in Sources */,
+				80B593C7225C6E0D00944C25 /* ThemeListCell.m in Sources */,
 				806E5EB3222E7A2E002A4305 /* PopIntroductionController.m in Sources */,
 				809823C0221BCE4D00F0A48B /* AppDelegate.m in Sources */,
 			);
