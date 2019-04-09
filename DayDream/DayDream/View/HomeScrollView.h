@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeScrollView : UIScrollView
 //@property (nonatomic,strong) EZRMutableNode <NSNumber *> *offsetYNode;
+@property (nonatomic,strong) EZRMutableNode *TapNode;
 
 -(instancetype)initWithFrame:(CGRect)frame;
 @end

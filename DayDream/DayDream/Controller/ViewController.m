@@ -10,6 +10,7 @@
 #import  "HomeScrollView.h"
 #import "SearchTableView.h"
 #import "PopIntroductionController.h"
+#import "ThemeViewController.h"
 @interface ViewController ()<UIPopoverPresentationControllerDelegate,UISearchControllerDelegate>
 @property (nonatomic,strong) HomeScrollView *MainScrollView;
 @property (nonatomic,strong) UISearchController *searchVC;
@@ -25,10 +26,8 @@
         _searchVC.dimsBackgroundDuringPresentation = NO;
         SearchTableView *searchView = [[SearchTableView alloc]initWithFrame:CGRectMake(0, IPhoneX?88:64, ScreenWidth, IPhoneX?ScreenHeight-88:ScreenHeight -64)];
         [_searchVC.view addSubview:searchView];
-        _searchVC.searchBar.searchBarStyle = UISearchBarStyleDefault;
-        [_searchVC.searchBar setBackgroundImage:[self imageWithColor:[UIColor whiteColor]]];
-       
-       
+        _searchVC.searchBar.searchBarStyle = UISearchBarStyleMinimal;
+
     }
     return _searchVC;
 }
@@ -47,7 +46,7 @@
     }
     
     [self setNavigationBar];
-    
+    [self setListenObject];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -65,13 +64,17 @@
 -(void)setNavigationBar
 {
     self.title = @"Photos for everyone";
-    self.navigationItem.largeTitleDisplayMode = UINavigationItemLargeTitleDisplayModeAlways;
+    self.navigationItem.largeTitleDisplayMode = UINavigationItemLargeTitleDisplayModeAutomatic;
     self.navigationController.navigationBar.prefersLargeTitles = YES;
+    self.navigationController.navigationBar.translucent = YES;
+  
+    [self.navigationController.navigationBar setLargeTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     UIColor *color = [[UIColor whiteColor] colorWithAlphaComponent:0.0];
     
     [self.navigationController.navigationBar setBackgroundImage:[self imageWithColor:color] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:[UIImage new]];
     
+  //  self.navigationItem.hidesSearchBarWhenScrolling =NO;
     
     UIView *clearView = [UIView new];
     clearView.backgroundColor = [UIColor clearColor];
@@ -82,15 +85,30 @@
     [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     button.frame = CGRectMake(0, 0, 40, 40);
     [clearView addSubview:button];
-//    [button mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.centerY.equalTo(clearView);
-//        make.left.equalTo(clearView).offset(0.0);
-//        make.width.height.mas_equalTo(40.0);
-//    }];
+
+    UIButton *setting =[UIButton buttonWithType:UIButtonTypeCustom];
+    [setting setImage:[UIImage imageNamed:@"设置"] forState:UIControlStateNormal];
+    [setting addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+    setting.frame = CGRectMake(ScreenWidth -50, 0, 40, 40);
+    [clearView addSubview:setting];
     
-      self.navigationItem.titleView = clearView;
-     self.navigationItem.searchController = self.searchVC;
     
+    self.navigationItem.titleView = clearView;
+    self.navigationItem.searchController = self.searchVC;
+    
+}
+
+-(void)setListenObject
+{
+    [[self.MainScrollView.TapNode listenedBy:self] withBlock:^(UITapGestureRecognizer*  _Nullable sender) {
+        
+        NSLog(@"---%ld ---",[sender view].tag);
+        if ([sender view].tag < 200) {
+            ThemeViewController *theme = [ThemeViewController new];
+            [self.navigationController pushViewController:theme animated:YES];
+        }
+        
+    } on:dispatch_get_main_queue()];
 }
 -(void)buttonClick:(UIButton *)button
 {
@@ -108,6 +126,10 @@
     popVC.backgroundColor = [UIColor whiteColor];//设置弹窗背景颜色(效果图里红色区域)
     [self presentViewController:VC animated:YES completion:nil];
 }
+
+
+#pragma POPDelegate
+
 - (BOOL) popoverPresentationControllerShouldDismissPopover:(UIPopoverPresentationController *)popoverPresentationController{
     
     return YES;

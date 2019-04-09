@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		089B4F0522224D9A00CF7CA3 /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 089B4F0422224D9A00CF7CA3 /* HomeViewModel.m */; };
 		089B4F0822224E0A00CF7CA3 /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 089B4F0722224E0A00CF7CA3 /* HomeModel.m */; };
+		08E524E6225B958400A4A5B1 /* ThemeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E524E5225B958400A4A5B1 /* ThemeViewController.m */; };
 		1B99D7E1D984A289ED19B39A /* libPods-DayDream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 623469BD00EF4D4574215A9C /* libPods-DayDream.a */; };
 		806E5E4D222409C5002A4305 /* NewViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 806E5E4C222409C5002A4305 /* NewViewModel.m */; };
 		806E5E5022250C8F002A4305 /* ExploreViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 806E5E4F22250C8F002A4305 /* ExploreViewModel.m */; };
@@ -29,6 +30,8 @@
 		089B4F0422224D9A00CF7CA3 /* HomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HomeViewModel.m; path = DayDream/ViewModel/HomeViewModel.m; sourceTree = SOURCE_ROOT; };
 		089B4F0622224E0A00CF7CA3 /* HomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HomeModel.h; path = DayDream/Model/HomeModel.h; sourceTree = SOURCE_ROOT; };
 		089B4F0722224E0A00CF7CA3 /* HomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HomeModel.m; path = DayDream/Model/HomeModel.m; sourceTree = SOURCE_ROOT; };
+		08E524E4225B958400A4A5B1 /* ThemeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThemeViewController.h; sourceTree = "<group>"; };
+		08E524E5225B958400A4A5B1 /* ThemeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThemeViewController.m; sourceTree = "<group>"; };
 		32FEE5B9AB334F2E7F819154 /* Pods-DayDream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayDream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DayDream/Pods-DayDream.debug.xcconfig"; sourceTree = "<group>"; };
 		623469BD00EF4D4574215A9C /* libPods-DayDream.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DayDream.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB27063C8F99D98FD29AAAF /* Pods-DayDream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayDream.release.xcconfig"; path = "Pods/Target Support Files/Pods-DayDream/Pods-DayDream.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +164,8 @@
 			children = (
 				809823C1221BCE4D00F0A48B /* ViewController.h */,
 				809823C2221BCE4D00F0A48B /* ViewController.m */,
+				08E524E4225B958400A4A5B1 /* ThemeViewController.h */,
+				08E524E5225B958400A4A5B1 /* ThemeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 			files = (
 				809823C3221BCE4D00F0A48B /* ViewController.m in Sources */,
 				80A35CDE225B3E7F00942017 /* SearchTableView.m in Sources */,
+				08E524E6225B958400A4A5B1 /* ThemeViewController.m in Sources */,
 				809823CE221BCE4F00F0A48B /* main.m in Sources */,
 				809823DF221BDD5A00F0A48B /* HomeScrollView.m in Sources */,
 				089B4F0522224D9A00CF7CA3 /* HomeViewModel.m in Sources */,

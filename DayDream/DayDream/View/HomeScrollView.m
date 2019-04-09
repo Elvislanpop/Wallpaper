@@ -90,7 +90,7 @@
 -(instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        
+        self.TapNode = [EZRMutableNode new];
         //self.offsetYNode = [EZRMutableNode new];
         self.per_page = 30;
         self.backgroundColor = [UIColor whiteColor];
@@ -147,15 +147,7 @@
         }];
         _headImageViewName = location;
     
-//        UILabel *mainTitle = [[UILabel alloc]init];
-//        mainTitle.textColor = [UIColor whiteColor];
-//        mainTitle.text =@"Photos for everyone";
-//        mainTitle.font = [UIFont boldSystemFontOfSize:25.f];
-//        [imageView addSubview:mainTitle];
-//        [mainTitle mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.center.equalTo(imageView);
-//           
-//        }];
+
         
     
         //add Explore Title (static)
@@ -203,8 +195,7 @@
             }];
             
             UIImageView *insideImageView = [[UIImageView alloc]init];
-            //insideImageView.image = [UIImage imageNamed:@"cat"];
-            
+            insideImageView.userInteractionEnabled =YES;
             insideImageView.backgroundColor = randomColor;
             
             
@@ -214,13 +205,18 @@
                 make.right.equalTo(view).offset(-10.0);
                 make.top.bottom.equalTo(view);
             }];
-       
+            
             insideImageView.layer.cornerRadius = 10.f;
             insideImageView.layer.masksToBounds = YES;
-             [self.insideImageViewGroup addObject:insideImageView];
+            [self.insideImageViewGroup addObject:insideImageView];
+            
+            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapClick:)];
+            insideImageView.tag = 100 + i;
+            [insideImageView addGestureRecognizer:tap];
             
             UIView *maskView = [UIView new];
             maskView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
+            maskView.userInteractionEnabled =NO;
             [insideImageView addSubview:maskView];
             [maskView mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.edges.equalTo(insideImageView);
@@ -273,6 +269,7 @@
                 make.height.mas_equalTo(ScreenHeight/2.0 -2);
             }];
             UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapClick:)];
+            newView.tag = 200 + j;
             [newView addGestureRecognizer:tap];
             
             
@@ -382,8 +379,9 @@
     
 }
 
--(void)tapClick:(UIButton *)sender
+-(void)tapClick:(UITapGestureRecognizer *)sender
 {
-    NSLog(@"2313123");
+    
+    self.TapNode.value = sender;
 }
 @end
